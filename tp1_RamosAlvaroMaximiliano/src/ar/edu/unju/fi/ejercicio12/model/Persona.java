@@ -67,26 +67,23 @@ public class Persona {
 	        int mes = fechaDeNacimiento.get(Calendar.MONTH);
 
 	        switch (mes) {
+	        	case Calendar.DECEMBER:
 	            case Calendar.JANUARY:
 	            case Calendar.FEBRUARY:
 	                return "Verano";
 	            case Calendar.MARCH:
-	                return "Otoño";
 	            case Calendar.APRIL:
 	            case Calendar.MAY:
-	                return "Invierno";
+	                return "Otoño";
 	            case Calendar.JUNE:
-	                return "Primavera";
 	            case Calendar.JULY:
 	            case Calendar.AUGUST:
-	                return "Verano";
+	                return "Invierno";
 	            case Calendar.SEPTEMBER:
-	                return "Otoño";
 	            case Calendar.OCTOBER:
 	            case Calendar.NOVEMBER:
 	                return "Primavera";
-	            default:
-	                return "Invierno";
+	            default: return "";
 	        }
 	    }
 
