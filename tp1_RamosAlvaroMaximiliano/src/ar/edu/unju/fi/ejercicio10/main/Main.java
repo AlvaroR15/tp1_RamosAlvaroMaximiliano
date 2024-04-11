@@ -11,10 +11,12 @@ public class Main {
 		
 		for (int i = 1; i < 4; i++) {
 			System.out.println("Datos Pizza " + i);
-			
-			System.out.println("Ingrese el diametro de la pizza");
-			System.out.println("Opciones disponibles (20,30,40)");
-			Integer diametro = scanner.nextInt();
+			Integer diametro = null;
+			do {
+				System.out.println("Ingrese el diametro de la pizza");
+				System.out.println("Opciones disponibles (20,30,40)");
+				diametro = scanner.nextInt();
+			} while(diametro != 20 && diametro != 30 && diametro != 40);
 			
 			System.out.println("¿Desea agregarle ingredientes especiales?");
 			Boolean ingredientesEspeciales = scanner.nextBoolean();
