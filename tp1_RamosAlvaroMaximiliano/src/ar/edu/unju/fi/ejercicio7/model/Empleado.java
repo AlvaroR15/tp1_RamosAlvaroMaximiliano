@@ -4,8 +4,8 @@ public class Empleado {
 	private String nombre;
 	private Integer legajo;
 	private Double salario;
-	private Double SALARIO_MINIMO = 210000.00;
-	private Double AUMENTO_POR_MERITOS = 20000.00;
+	private final Double SALARIO_MINIMO = 210000.00;
+	private final Double AUMENTO_POR_MERITOS = 20000.00;
 	
 	public Empleado(String nombre, Integer legajo, Double salario) {
 		this.nombre = nombre;
