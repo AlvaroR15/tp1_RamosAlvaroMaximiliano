@@ -24,17 +24,28 @@ public class Main {
 	}
 
 	public static Calendar pedirFecha() {
-		System.out.println("Ingrese día de nacimiento");
-		Integer dia = scanner.nextInt();
-		scanner.nextLine();
+		Integer dia, mes, anio;
 		
-		System.out.println("Ingrese el mes de nacimiento");
-		Integer mes = scanner.nextInt()-1;
-		scanner.nextLine();
+		do {
+			System.out.println("Ingrese día de nacimiento");
+			dia = scanner.nextInt();
+			scanner.nextLine();			
+		} while(dia < 1 || dia > 31);
 		
-		System.out.println("Ingrese el año de nacimiento");
-		Integer anio = scanner.nextInt();
-		scanner.nextLine();
+		do {
+			System.out.println("Ingrese el mes de nacimiento");
+			mes = scanner.nextInt()-1;
+			scanner.nextLine();
+		} while(mes < 0 || mes > 11);
+		
+		
+		Calendar hoy = Calendar.getInstance();
+		Integer anioActual = hoy.get(Calendar.YEAR);
+		do {
+			System.out.println("Ingrese el año de nacimiento");
+			anio = scanner.nextInt();
+			scanner.nextLine();
+		} while (anio > anioActual);
 		
 		Calendar fecha = new GregorianCalendar(anio,mes,dia);
 		return fecha;
